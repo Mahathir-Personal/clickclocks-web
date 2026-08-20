@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Web Accessibility Statement | Click Clocks</title>
+  <meta name="description" content="How Click Clocks works toward WCAG 2.1 Level AA, and how to report an accessibility barrier.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="/styles.css?v=30">
+</head>
+<body class="page-legal">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <div class="announcement" id="announcement" aria-label="Announcements" role="region">
+    <div class="announcement__viewport">
+      <p class="announcement__item is-current">Sign up for texts and get early access to every drop</p>
+      <p class="announcement__item" aria-hidden="true">New: Yoga Mood straps just dropped</p>
+    </div>
+  </div>
+
+  <header class="site-header" id="site-header">
+    <div class="container site-header__inner">
+      <button class="icon-btn" type="button" id="nav-toggle" aria-controls="site-nav" aria-expanded="false">
+        <span class="nav-toggle__bars" aria-hidden="true"></span>
+        <span class="visually-hidden">Menu</span>
+      </button>
+
+      <a class="logo" href="/">
+        <span class="logo__text">Click Clocks</span>
+      </a>
+
+      <button class="icon-btn" type="button" id="search-toggle" aria-controls="site-search" aria-expanded="false">
+        <svg class="icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true" focusable="false">
+          <circle cx="9" cy="9" r="6" stroke="currentColor" stroke-width="1.6"></circle>
+          <path d="M13.6 13.6 18 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path>
+        </svg>
+        <span class="visually-hidden">Search</span>
+      </button>
+    </div>
+
+    <nav class="site-nav" id="site-nav" aria-label="Main" hidden>
+      <ul class="container site-nav__list">
+        <li class="nav-branch">
+          <button class="nav-branch__toggle" type="button" aria-expanded="false" aria-controls="nav-men">
+            Men
+          </button>
+          <div class="nav-branch__panel" id="nav-men">
+            <ul class="nav-branch__list">
+              <li class="nav-group">
+                <button class="nav-group__toggle" type="button" aria-expanded="false">
+                  Featured Wear
+                  <span class="nav-mark" aria-hidden="true"></span>
+                </button>
+                <div class="nav-group__panel">
+                  <ul class="nav-group__links">
+                    <li><a href="/collections/new-arrivals/">New Arrivals</a></li>
+                    <li><a href="/collections/best-sellers/">Best Sellers</a></li>
+                    <li><a href="/collections/element-edition/">Element Edition</a></li>
+                    <li><a href="/collections/elite-packages/">Elite Packages</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-group">
+                <button class="nav-group__toggle" type="button" aria-expanded="false">
+                  Shop by Type
+                  <span class="nav-mark" aria-hidden="true"></span>
+                </button>
+                <div class="nav-group__panel">
+                  <ul class="nav-group__links">
+                    <li><a href="/collections/flip-flops/">Flip-Flops</a></li>
+                    <li><a href="/collections/slides/">Slides</a></li>
+                    <li><a href="/collections/straps/">Straps</a></li>
+                    <li><a href="/collections/bundles/">Bundles</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-group">
+                <button class="nav-group__toggle" type="button" aria-expanded="false">
+                  Collaboration
+                  <span class="nav-mark" aria-hidden="true"></span>
+                </button>
+                <div class="nav-group__panel">
+                  <ul class="nav-group__links">
+                    <li><a href="/collections/collab-drop-01/">Collab Drop 01</a></li>
+                    <li><a href="/collections/collab-drop-02/">Collab Drop 02</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li><a class="nav-link--pending" href="#" aria-disabled="true">Women</a></li>
+        <li><a class="nav-link--pending" href="#" aria-disabled="true">Kids</a></li>
+        <li><a href="/#featured">Collections</a></li>
+        <li><a href="/pages/our-story">Our story</a></li>
+        <li><a href="/pages/blog">Blog</a></li>
+      </ul>
+    </nav>
+
+    <div class="site-search" id="site-search" hidden>
+      <form class="container site-search__form" role="search" action="/#featured">
+        <label class="visually-hidden" for="search-input">Search products</label>
+        <input class="field__input" id="search-input" name="q" type="search" placeholder="Search flip-flops, slides, straps">
+        <button class="btn btn--primary" type="submit">Search</button>
+      </form>
+    </div>
+  </header>
+
+  <main id="main">
+    <header class="collection-hero legal-hero">
+      <div class="container">
+        <p class="collection-hero__eyebrow">Legal</p>
+        <h1 class="collection-hero__title">Web Accessibility Statement</h1>
+        <p class="collection-hero__meta">Last modified: August 19, 2026</p>
+      </div>
+    </header>
+
+    <article class="legal">
+      <div class="container legal__inner">
+        <p class="legal__lede">Quick Connect Footwear, LLC ("Click Clocks") is committed to making our website usable by everyone, including people with disabilities. Accessibility is an ongoing effort, and we treat it as part of how we build, not a one-time audit.</p>
+
+        <ol class="legal__contents">
+          <li><a href="#standard">Our Standard</a></li>
+          <li><a href="#implemented">What We've Implemented</a></li>
+          <li><a href="#ongoing">Ongoing Work</a></li>
+          <li><a href="#third-party">Third-Party Content</a></li>
+          <li><a href="#alternative-access">Alternative Access</a></li>
+          <li><a href="#feedback">Feedback and Reporting a Barrier</a></li>
+          <li><a href="#complaints">Formal Complaints</a></li>
+        </ol>
+
+        <section class="legal__section" id="standard">
+          <h2>Our Standard</h2>
+          <p>We aim to conform to the <a class="link" href="https://www.w3.org/TR/WCAG21/" rel="noopener noreferrer">Web Content Accessibility Guidelines (WCAG) 2.1, Level AA</a>, published by the World Wide Web Consortium. These guidelines explain how to make web content more accessible to people with visual, auditory, motor, cognitive, and neurological disabilities.</p>
+        </section>
+
+        <section class="legal__section" id="implemented">
+          <h2>What We've Implemented</h2>
+          <ul>
+            <li><strong>Keyboard navigation:</strong> all interactive elements, including the menu, carousels, filters, and forms, are reachable and operable by keyboard alone</li>
+            <li><strong>Visible focus indicators</strong> on all interactive elements</li>
+            <li><strong>Descriptive alternative text</strong> on product and content images</li>
+            <li><strong>Semantic structure:</strong> proper heading hierarchy, landmarks, and list markup for screen reader navigation</li>
+            <li><strong>Accessible labels</strong> on all form fields, buttons, and icon-only controls</li>
+            <li><strong>Color contrast</strong> meeting or exceeding WCAG AA ratios for text and interactive elements</li>
+            <li><strong>Color independence:</strong> information is never conveyed by color alone</li>
+            <li><strong>Reduced motion support:</strong> animations, carousels, and scroll effects are disabled when a visitor's system indicates a "prefers-reduced-motion" preference</li>
+            <li><strong>Resizable text</strong> up to 200% without loss of content or function</li>
+            <li><strong>Responsive layouts</strong> that work across screen sizes, zoom levels, and orientations</li>
+            <li><strong>Skip navigation link</strong> to jump directly to main content</li>
+          </ul>
+        </section>
+
+        <section class="legal__section" id="ongoing">
+          <h2>Ongoing Work</h2>
+          <p>Accessibility is not finished. We currently:</p>
+          <ul>
+            <li>Include accessibility review in our design and development process</li>
+            <li>Test with keyboard navigation and screen reader software</li>
+            <li>Review new pages and features before release</li>
+            <li>Address issues reported by visitors on a prioritized basis</li>
+          </ul>
+          <p>We know some areas still need improvement, particularly in third-party embedded content and older assets. We are working through these.</p>
+        </section>
+
+        <section class="legal__section" id="third-party">
+          <h2>Third-Party Content</h2>
+          <p>Some parts of our site rely on third-party services: payment processing, embedded social feeds, review widgets, and shipping tools. We do not control the accessibility of that content. Where a third-party barrier prevents you from completing a task, contact us and we will help you complete it another way.</p>
+        </section>
+
+        <section class="legal__section" id="alternative-access">
+          <h2>Alternative Access</h2>
+          <p>If any part of our site is not accessible to you, we will provide the information or complete the transaction through another channel. Contact us by email or phone and we can:</p>
+          <ul>
+            <li>Take an order over the phone</li>
+            <li>Provide product details, sizing, or pricing in an alternative format</li>
+            <li>Process returns or exchanges directly</li>
+            <li>Answer any question the site would otherwise answer</li>
+          </ul>
+        </section>
+
+        <section class="legal__section" id="feedback">
+          <h2>Feedback and Reporting a Barrier</h2>
+          <p>We want to hear about problems you encounter. When you contact us, it helps to include:</p>
+          <ul>
+            <li>The page URL where you encountered the issue</li>
+            <li>What you were trying to do</li>
+            <li>The assistive technology, browser, and device you were using</li>
+            <li>A description of the barrier</li>
+          </ul>
+          <div class="legal__contact">
+            <p><strong>Email:</strong> <a class="link" href="mailto:accessibility@clickclocks.com">accessibility@clickclocks.com</a><br>
+            <strong>Phone:</strong> [Phone Number]<br>
+            <strong>Mail:</strong> Quick Connect Footwear, LLC, Attn: Accessibility,<br>
+            [Mailing Address]</p>
+          </div>
+          <p>We aim to acknowledge accessibility reports within 3 business days and to provide a substantive response, including a remediation timeline where applicable, within 10 business days.</p>
+        </section>
+
+        <section class="legal__section" id="complaints">
+          <h2>Formal Complaints</h2>
+          <p>If our response does not resolve your concern, you may escalate by writing to the mailing address above marked "Accessibility, Formal Complaint." We will review and respond in writing.</p>
+        </section>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer" id="site-footer">
+    <noscript>
+      <div class="container">
+        <p><a href="/pages/our-story">Our Story</a></p>
+        <p><a href="/collections/all/">Shop All</a></p>
+        <p><a href="/pages/contact">Contact Us</a></p>
+        <p>&copy; 2026 Quick Connect Footwear, LLC. All rights reserved.</p>
+      </div>
+    </noscript>
+  </footer>
+
+  <script src="/catalog.js?v=28" defer></script>
+  <script src="/script.js?v=26" defer></script>
+</body>
+</html>

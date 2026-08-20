@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Our Story | Click Clocks</title>
+  <meta name="description" content="How a simple frustration turned into Click Clocks: one base, endless looks, and flip-flops you can rebuild instead of replace.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="/styles.css?v=30">
+</head>
+<body class="page-story">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <div class="announcement" id="announcement" aria-label="Announcements" role="region">
+    <div class="announcement__viewport">
+      <p class="announcement__item is-current">Sign up for texts and get early access to every drop</p>
+      <p class="announcement__item" aria-hidden="true">New: Yoga Mood straps just dropped</p>
+    </div>
+  </div>
+
+  <header class="site-header" id="site-header">
+    <div class="container site-header__inner">
+      <button class="icon-btn" type="button" id="nav-toggle" aria-controls="site-nav" aria-expanded="false">
+        <span class="nav-toggle__bars" aria-hidden="true"></span>
+        <span class="visually-hidden">Menu</span>
+      </button>
+
+      <a class="logo" href="/">
+        <span class="logo__text">Click Clocks</span>
+      </a>
+
+      <button class="icon-btn" type="button" id="search-toggle" aria-controls="site-search" aria-expanded="false">
+        <svg class="icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true" focusable="false">
+          <circle cx="9" cy="9" r="6" stroke="currentColor" stroke-width="1.6"></circle>
+          <path d="M13.6 13.6 18 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path>
+        </svg>
+        <span class="visually-hidden">Search</span>
+      </button>
+    </div>
+
+    <nav class="site-nav" id="site-nav" aria-label="Main" hidden>
+      <ul class="container site-nav__list">
+        <li class="nav-branch">
+          <button class="nav-branch__toggle" type="button" aria-expanded="false" aria-controls="nav-men">
+            Men
+          </button>
+          <div class="nav-branch__panel" id="nav-men">
+            <ul class="nav-branch__list">
+              <li class="nav-group">
+                <button class="nav-group__toggle" type="button" aria-expanded="false">
+                  Featured Wear
+                  <span class="nav-mark" aria-hidden="true"></span>
+                </button>
+                <div class="nav-group__panel">
+                  <ul class="nav-group__links">
+                    <li><a href="/collections/new-arrivals/">New Arrivals</a></li>
+                    <li><a href="/collections/best-sellers/">Best Sellers</a></li>
+                    <li><a href="/collections/element-edition/">Element Edition</a></li>
+                    <li><a href="/collections/elite-packages/">Elite Packages</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-group">
+                <button class="nav-group__toggle" type="button" aria-expanded="false">
+                  Shop by Type
+                  <span class="nav-mark" aria-hidden="true"></span>
+                </button>
+                <div class="nav-group__panel">
+                  <ul class="nav-group__links">
+                    <li><a href="/collections/flip-flops/">Flip-Flops</a></li>
+                    <li><a href="/collections/slides/">Slides</a></li>
+                    <li><a href="/collections/straps/">Straps</a></li>
+                    <li><a href="/collections/bundles/">Bundles</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-group">
+                <button class="nav-group__toggle" type="button" aria-expanded="false">
+                  Collaboration
+                  <span class="nav-mark" aria-hidden="true"></span>
+                </button>
+                <div class="nav-group__panel">
+                  <ul class="nav-group__links">
+                    <li><a href="/collections/collab-drop-01/">Collab Drop 01</a></li>
+                    <li><a href="/collections/collab-drop-02/">Collab Drop 02</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li><a class="nav-link--pending" href="#" aria-disabled="true">Women</a></li>
+        <li><a class="nav-link--pending" href="#" aria-disabled="true">Kids</a></li>
+        <li><a href="/#featured">Collections</a></li>
+        <li><a href="/pages/our-story" aria-current="page">Our story</a></li>
+        <li><a href="/pages/blog">Blog</a></li>
+      </ul>
+    </nav>
+
+    <div class="site-search" id="site-search" hidden>
+      <form class="container site-search__form" role="search" action="/#featured">
+        <label class="visually-hidden" for="search-input">Search products</label>
+        <input class="field__input" id="search-input" name="q" type="search" placeholder="Search flip-flops, slides, straps">
+        <button class="btn btn--primary" type="submit">Search</button>
+      </form>
+    </div>
+  </header>
+
+  <main id="main">
+    <div id="story-page">
+      <section class="story-hero" id="story-hero" aria-labelledby="story-hero-title"></section>
+      <div class="story-page__timeline" id="story-page-timeline"></div>
+      <section class="story-values" id="story-page-values"></section>
+      <section class="story-cta" id="story-page-cta" aria-labelledby="story-cta-title"></section>
+    </div>
+  </main>
+
+  <footer class="site-footer" id="site-footer">
+    <noscript>
+      <div class="container">
+        <p><a href="/pages/our-story">Our Story</a></p>
+        <p><a href="/collections/all/">Shop All</a></p>
+        <p><a href="/pages/contact">Contact Us</a></p>
+        <p>&copy; 2026 Quick Connect Footwear, LLC. All rights reserved.</p>
+      </div>
+    </noscript>
+  </footer>
+
+  <noscript>
+    <div class="container" style="padding-block: 48px">
+      <h1>One base. Endless looks.</h1>
+      <p>How a simple frustration turned into a better way to wear flip-flops.</p>
+      <h2>The Idea</h2>
+      <p>2024</p>
+      <p>It started with a simple frustration: why can't you change your flip-flop straps without buying a whole new pair? Every season meant another pair in the closet, then another in the trash. We wanted one base that could keep up with how people actually dress: a new look without a new shoe.</p>
+      <h2>First Prototype</h2>
+      <p>Early 2025</p>
+      <p>The first Click Clocks prototype was built in a garage. Messy, imperfect, and exactly what we needed to prove the concept worked. The click had to be simple enough to do on a beach, and secure enough to last a whole summer. After a lot of failed fittings, the twist lock held.</p>
+      <h2>The Brand Takes Shape</h2>
+      <p>Mid 2025</p>
+      <p>Quick Connect Footwear, LLC was formed. The name Click Clocks stuck. The mission became clear: customizable footwear that doesn't cost the earth. We sketched the first Element palettes, wrote the recycling plan for worn-out soles, and decided the brand would live or die on whether people actually swapped their straps.</p>
+      <h2>First Drop</h2>
+      <p>2026</p>
+      <p>The Element Edition launched. Roots, Flow, Fire, Breathe: four straps, four moods, one base. The response blew us away. People mixed colors we never paired in the lookbook, and came back for a second set instead of a second pair. That was the proof the garage prototype had been waiting for.</p>
+      <h2>What's Next</h2>
+      <p>Coming Soon</p>
+      <p>New colorways, brand collabs, and a full slide collection. We're just getting started. Next up is more ways to rebuild the pair you already own, and partnerships that put Click Clocks on feet we have not reached yet. Same base. New looks. Still no pile of last season's straps.</p>
+      <p><a href="/#featured">Shop Now</a></p>
+    </div>
+  </noscript>
+
+  <script src="/catalog.js?v=28" defer></script>
+  <script src="/script.js?v=26" defer></script>
+</body>
+</html>

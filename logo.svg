@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Placeholder wordmark. The header and footer paint this file as a CSS mask
+  filled with currentColor, so one file covers both the white and the dark
+  state. Replace it with the real logo, keeping these two properties:
+  a transparent background, and shapes in solid black.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 28" width="240" height="28" role="img" aria-label="Click Clocks">
+  <text x="0" y="21"
+        font-family="Geist, Helvetica, Arial, sans-serif"
+        font-size="21"
+        font-weight="600"
+        letter-spacing="2.4"
+        fill="#000000">CLICK CLOCKS</text>
+</svg>

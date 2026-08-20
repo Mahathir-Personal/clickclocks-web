@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Click Clocks | Flip-flops and slides you can rebuild</title>
+  <meta name="description" content="Click Clocks makes customizable footwear: flip-flops with interchangeable straps and slides with replaceable sliders. Swap the parts, keep the pair.">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Click Clocks | Flip-flops and slides you can rebuild">
+  <meta property="og:description" content="Customizable footwear. Flip-flops with interchangeable straps and slides with replaceable sliders.">
+  <meta property="og:image" content="images/hero-slide-1-1536.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="styles.css?v=30">
+
+  <!-- Preload matches the art direction of the first slide, so only the crop
+       the viewport will actually use is fetched early. -->
+  <link rel="preload" as="image" fetchpriority="high"
+        media="(orientation: portrait)"
+        imagesrcset="images/hero-slide-1-portrait-576.webp 576w, images/hero-slide-1-portrait-864.webp 864w"
+        imagesizes="100vw">
+  <link rel="preload" as="image" fetchpriority="high"
+        media="(orientation: landscape)"
+        imagesrcset="images/hero-slide-1-768.webp 768w, images/hero-slide-1-1024.webp 1024w, images/hero-slide-1-1536.webp 1536w"
+        imagesizes="100vw">
+
+  <noscript>
+    <style>
+      /* The menu, search and carousel controls all need script to work, so
+         open the panels permanently and drop the controls that would be
+         dead ends. */
+      .site-nav[hidden],
+      .site-search[hidden] { display: block; }
+      #nav-toggle,
+      #search-toggle,
+      .hero__progress,
+      .featured-carousel__button,
+      .featured-carousel__viewport { display: none; }
+    </style>
+  </noscript>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- Region 1: announcement bar, sits above the header in normal flow -->
+  <div class="announcement" id="announcement" aria-label="Announcements" role="region">
+    <div class="announcement__viewport">
+      <p class="announcement__item is-current">Sign up for texts and get early access to every drop</p>
+      <p class="announcement__item" aria-hidden="true">New: Yoga Mood straps just dropped</p>
+    </div>
+  </div>
+
+  <!-- Region 2: header, absolutely positioned so the hero photo runs behind it -->
+  <header class="site-header" id="site-header">
+    <div class="container site-header__inner">
+      <button class="icon-btn" type="button" id="nav-toggle" aria-controls="site-nav" aria-expanded="false">
+        <span class="nav-toggle__bars" aria-hidden="true"></span>
+        <span class="visually-hidden">Menu</span>
+      </button>
+
+      <a class="logo" href="#main">
+        <span class="logo__text">Click Clocks</span>
+      </a>
+
+      <button class="icon-btn" type="button" id="search-toggle" aria-controls="site-search" aria-expanded="false">
+        <svg class="icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true" focusable="false">
+          <circle cx="9" cy="9" r="6" stroke="currentColor" stroke-width="1.6"></circle>
+          <path d="M13.6 13.6 18 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path>
+        </svg>
+        <span class="visually-hidden">Search</span>
+      </button>
+    </div>
+
+    <nav class="site-nav" id="site-nav" aria-label="Main" hidden>
+      <ul class="container site-nav__list">
+        <li class="nav-branch">
+          <button class="nav-branch__toggle" type="button" aria-expanded="false" aria-controls="nav-men">
+            Men
+          </button>
+          <div class="nav-branch__panel" id="nav-men">
+            <ul class="nav-branch__list">
+              <li class="nav-group">
+                <button class="nav-group__toggle" type="button" aria-expanded="false">
+                  Featured Wear
+                  <span class="nav-mark" aria-hidden="true"></span>
+                </button>
+                <div class="nav-group__panel">
+                  <ul class="nav-group__links">
+                    <li><a href="/collections/new-arrivals/">New Arrivals</a></li>
+                    <li><a href="/collections/best-sellers/">Best Sellers</a></li>
+                    <li><a href="/collections/element-edition/">Element Edition</a></li>
+                    <li><a href="/collections/elite-packages/">Elite Packages</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-group">
+                <button class="nav-group__toggle" type="button" aria-expanded="false">
+                  Shop by Type
+                  <span class="nav-mark" aria-hidden="true"></span>
+                </button>
+                <div class="nav-group__panel">
+                  <ul class="nav-group__links">
+                    <li><a href="/collections/flip-flops/">Flip-Flops</a></li>
+                    <li><a href="/collections/slides/">Slides</a></li>
+                    <li><a href="/collections/straps/">Straps</a></li>
+                    <li><a href="/collections/bundles/">Bundles</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-group">
+                <button class="nav-group__toggle" type="button" aria-expanded="false">
+                  Collaboration
+                  <span class="nav-mark" aria-hidden="true"></span>
+                </button>
+                <div class="nav-group__panel">
+                  <ul class="nav-group__links">
+                    <li><a href="/collections/collab-drop-01/">Collab Drop 01</a></li>
+                    <li><a href="/collections/collab-drop-02/">Collab Drop 02</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li><a class="nav-link--pending" href="#" aria-disabled="true">Women</a></li>
+        <li><a class="nav-link--pending" href="#" aria-disabled="true">Kids</a></li>
+        <li><a href="#featured">Collections</a></li>
+        <li><a href="/pages/our-story">Our story</a></li>
+        <li><a href="/pages/blog">Blog</a></li>
+      </ul>
+    </nav>
+
+    <div class="site-search" id="site-search" hidden>
+      <form class="container site-search__form" role="search" action="#featured">
+        <label class="visually-hidden" for="search-input">Search products</label>
+        <input class="field__input" id="search-input" name="q" type="search" placeholder="Search flip-flops, slides, straps">
+        <button class="btn btn--primary" type="submit">Search</button>
+      </form>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Region 3: full-bleed hero carousel, runs up behind the header -->
+    <section class="hero" aria-label="Featured collections">
+      <ul class="hero__slides">
+        <li class="hero__slide is-current">
+          <picture>
+            <source type="image/webp" media="(orientation: portrait)"
+              srcset="images/hero-slide-1-portrait-576.webp 576w, images/hero-slide-1-portrait-864.webp 864w" sizes="100vw">
+            <source type="image/jpeg" media="(orientation: portrait)"
+              srcset="images/hero-slide-1-portrait-576.jpg 576w, images/hero-slide-1-portrait-864.jpg 864w" sizes="100vw">
+            <source type="image/webp"
+              srcset="images/hero-slide-1-768.webp 768w, images/hero-slide-1-1024.webp 1024w, images/hero-slide-1-1536.webp 1536w" sizes="100vw">
+            <img src="images/hero-slide-1-1536.jpg"
+              srcset="images/hero-slide-1-768.jpg 768w, images/hero-slide-1-1024.jpg 1024w, images/hero-slide-1-1536.jpg 1536w"
+              sizes="100vw" width="1536" height="864" fetchpriority="high" decoding="async"
+              alt="Woman sitting at the edge of a sunlit pool wearing flip-flops with a cobalt blue strap.">
+          </picture>
+        </li>
+
+        <li class="hero__slide" aria-hidden="true">
+          <picture>
+            <source type="image/webp" media="(orientation: portrait)"
+              srcset="images/hero-slide-2-portrait-576.webp 576w, images/hero-slide-2-portrait-864.webp 864w" sizes="100vw">
+            <source type="image/jpeg" media="(orientation: portrait)"
+              srcset="images/hero-slide-2-portrait-576.jpg 576w, images/hero-slide-2-portrait-864.jpg 864w" sizes="100vw">
+            <source type="image/webp"
+              srcset="images/hero-slide-2-768.webp 768w, images/hero-slide-2-1024.webp 1024w, images/hero-slide-2-1536.webp 1536w" sizes="100vw">
+            <img src="images/hero-slide-2-1536.jpg"
+              srcset="images/hero-slide-2-768.jpg 768w, images/hero-slide-2-1024.jpg 1024w, images/hero-slide-2-1536.jpg 1536w"
+              sizes="100vw" width="1536" height="864" loading="lazy" decoding="async"
+              alt="Two people walking along a wooden boardwalk in white and charcoal slides at sunset.">
+          </picture>
+        </li>
+
+        <li class="hero__slide" aria-hidden="true">
+          <picture>
+            <source type="image/webp" media="(orientation: portrait)"
+              srcset="images/hero-slide-3-portrait-576.webp 576w, images/hero-slide-3-portrait-864.webp 864w" sizes="100vw">
+            <source type="image/jpeg" media="(orientation: portrait)"
+              srcset="images/hero-slide-3-portrait-576.jpg 576w, images/hero-slide-3-portrait-864.jpg 864w" sizes="100vw">
+            <source type="image/webp"
+              srcset="images/hero-slide-3-768.webp 768w, images/hero-slide-3-1024.webp 1024w, images/hero-slide-3-1536.webp 1536w" sizes="100vw">
+            <img src="images/hero-slide-3-1536.jpg"
+              srcset="images/hero-slide-3-768.jpg 768w, images/hero-slide-3-1024.jpg 1024w, images/hero-slide-3-1536.jpg 1536w"
+              sizes="100vw" width="1536" height="864" loading="lazy" decoding="async"
+              alt="Person sitting cross legged on a cork yoga mat beside flip-flops with a coral strap.">
+          </picture>
+        </li>
+      </ul>
+
+      <div class="hero__content">
+        <div class="container hero__content-grid">
+          <div class="hero__copy">
+            <p class="hero__eyebrow">Our sun-ready favorites</p>
+            <h1 class="hero__byline">Slip into summer style</h1>
+          </div>
+
+          <a class="image-cta hero__cta" href="#featured">
+            <span class="image-cta__label">Shop now</span>
+            <svg class="image-cta__arrow" width="22" height="12" viewBox="0 0 22 12" fill="none" aria-hidden="true" focusable="false">
+              <path d="M0 6h20M15 1l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </a>
+
+          <div class="hero__progress" id="hero-progress" role="group" aria-label="Carousel slides">
+            <button class="hero__segment" type="button" aria-current="true">
+              <span class="hero__segment-track"><span class="hero__segment-fill"></span></span>
+              <span class="visually-hidden">Show slide 1 of 3</span>
+            </button>
+            <button class="hero__segment" type="button">
+              <span class="hero__segment-track"><span class="hero__segment-fill"></span></span>
+              <span class="visually-hidden">Show slide 2 of 3</span>
+            </button>
+            <button class="hero__segment" type="button">
+              <span class="hero__segment-track"><span class="hero__segment-fill"></span></span>
+              <span class="visually-hidden">Show slide 3 of 3</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- v1.3 Product Duo. Replace the clearly named files in images/source/
+         and rerun tools/optimize-images.py when final product photography lands. -->
+    <section class="product-duo" aria-labelledby="product-duo-title">
+      <h2 class="visually-hidden" id="product-duo-title">Shop customizable footwear</h2>
+      <div class="product-duo__grid">
+        <article class="merch-panel merch-panel--duo">
+          <picture class="merch-panel__media">
+            <!-- Product placeholder: interchangeable-strap flip-flops -->
+            <source type="image/webp"
+              srcset="images/duo-flip-flops-768.webp 768w, images/duo-flip-flops-1200.webp 1200w"
+              sizes="(min-width: 640px) 50vw, 100vw">
+            <img src="images/duo-flip-flops-1200.jpg"
+              srcset="images/duo-flip-flops-768.jpg 768w, images/duo-flip-flops-1200.jpg 1200w"
+              sizes="(min-width: 640px) 50vw, 100vw"
+              width="1200" height="900" loading="lazy" decoding="async"
+              alt="Flip-flops with cobalt straps beside interchangeable coral and white strap sets.">
+          </picture>
+          <div class="merch-panel__copy">
+            <p class="merch-panel__eyebrow">The Original</p>
+            <h3 class="merch-panel__byline">Snap in. Stand out.</h3>
+          </div>
+          <a class="image-cta merch-panel__cta" href="#featured">
+            <span class="image-cta__label">Shop now</span>
+            <svg class="image-cta__arrow" width="22" height="12" viewBox="0 0 22 12" fill="none" aria-hidden="true" focusable="false">
+              <path d="M0 6h20M15 1l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </a>
+        </article>
+
+        <article class="merch-panel merch-panel--duo">
+          <picture class="merch-panel__media">
+            <!-- Product placeholder: slides with replaceable slider bands -->
+            <source type="image/webp"
+              srcset="images/duo-slides-768.webp 768w, images/duo-slides-1200.webp 1200w"
+              sizes="(min-width: 640px) 50vw, 100vw">
+            <img src="images/duo-slides-1200.jpg"
+              srcset="images/duo-slides-768.jpg 768w, images/duo-slides-1200.jpg 1200w"
+              sizes="(min-width: 640px) 50vw, 100vw"
+              width="1200" height="900" loading="lazy" decoding="async"
+              alt="Off-white slides with detachable charcoal and cobalt slider bands on a pool deck.">
+          </picture>
+          <div class="merch-panel__copy">
+            <p class="merch-panel__eyebrow">The Slide</p>
+            <h3 class="merch-panel__byline">New look, same comfort.</h3>
+          </div>
+          <a class="image-cta merch-panel__cta" href="#featured">
+            <span class="image-cta__label">Shop now</span>
+            <svg class="image-cta__arrow" width="22" height="12" viewBox="0 0 22 12" fill="none" aria-hidden="true" focusable="false">
+              <path d="M0 6h20M15 1l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <!-- v1.3 Shop by Category. This is an additional full-bleed merchandising
+         section; the existing four-tile category section remains unchanged. -->
+    <section class="category-showcase" id="categories" aria-labelledby="category-showcase-title">
+      <div class="category-showcase__header">
+        <h2 class="section-title" id="category-showcase-title">Shop by Category</h2>
+      </div>
+
+      <div class="category-showcase__grid">
+        <article class="merch-panel merch-panel--category">
+          <picture class="merch-panel__media">
+            <!-- Lifestyle placeholder: female model wearing Click Clocks -->
+            <source type="image/webp"
+              srcset="images/category-for-her-480.webp 480w, images/category-for-her-800.webp 800w"
+              sizes="(min-width: 640px) 33.333vw, 100vw">
+            <img src="images/category-for-her-800.jpg"
+              srcset="images/category-for-her-480.jpg 480w, images/category-for-her-800.jpg 800w"
+              sizes="(min-width: 640px) 33.333vw, 100vw"
+              width="800" height="1067" loading="lazy" decoding="async"
+              alt="Woman walking on a seaside promenade in coral-strap flip-flops.">
+          </picture>
+          <div class="merch-panel__copy">
+            <p class="merch-panel__eyebrow">For Her</p>
+            <h3 class="merch-panel__byline">Made to move with you.</h3>
+          </div>
+          <a class="image-cta merch-panel__cta" href="#featured">
+            <span class="image-cta__label">Shop now</span>
+            <svg class="image-cta__arrow" width="22" height="12" viewBox="0 0 22 12" fill="none" aria-hidden="true" focusable="false">
+              <path d="M0 6h20M15 1l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </a>
+        </article>
+
+        <article class="merch-panel merch-panel--category">
+          <picture class="merch-panel__media">
+            <!-- Product placeholder: bestselling Click Clocks styles -->
+            <source type="image/webp"
+              srcset="images/category-bestsellers-480.webp 480w, images/category-bestsellers-800.webp 800w"
+              sizes="(min-width: 640px) 33.333vw, 100vw">
+            <img src="images/category-bestsellers-800.jpg"
+              srcset="images/category-bestsellers-480.jpg 480w, images/category-bestsellers-800.jpg 800w"
+              sizes="(min-width: 640px) 33.333vw, 100vw"
+              width="800" height="1067" loading="lazy" decoding="async"
+              alt="Cobalt flip-flops, black-band slides and coral flip-flops arranged on concrete steps.">
+          </picture>
+          <div class="merch-panel__copy">
+            <p class="merch-panel__eyebrow">Bestsellers</p>
+            <h3 class="merch-panel__byline">The ones everyone's wearing.</h3>
+          </div>
+          <a class="image-cta merch-panel__cta" href="#featured">
+            <span class="image-cta__label">Shop now</span>
+            <svg class="image-cta__arrow" width="22" height="12" viewBox="0 0 22 12" fill="none" aria-hidden="true" focusable="false">
+              <path d="M0 6h20M15 1l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </a>
+        </article>
+
+        <article class="merch-panel merch-panel--category">
+          <picture class="merch-panel__media">
+            <!-- Lifestyle placeholder: male model wearing Click Clocks -->
+            <source type="image/webp"
+              srcset="images/category-for-him-480.webp 480w, images/category-for-him-800.webp 800w"
+              sizes="(min-width: 640px) 33.333vw, 100vw">
+            <img src="images/category-for-him-800.jpg"
+              srcset="images/category-for-him-480.jpg 480w, images/category-for-him-800.jpg 800w"
+              sizes="(min-width: 640px) 33.333vw, 100vw"
+              width="800" height="1067" loading="lazy" decoding="async"
+              alt="Man walking along a beach boardwalk in charcoal slides.">
+          </picture>
+          <div class="merch-panel__copy">
+            <p class="merch-panel__eyebrow">For Him</p>
+            <h3 class="merch-panel__byline">Built for wherever the day takes you.</h3>
+          </div>
+          <a class="image-cta merch-panel__cta" href="#featured">
+            <span class="image-cta__label">Shop now</span>
+            <svg class="image-cta__arrow" width="22" height="12" viewBox="0 0 22 12" fill="none" aria-hidden="true" focusable="false">
+              <path d="M0 6h20M15 1l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <!-- v1.4 Featured Products. Cards are rendered from the single product
+         config in script.js; the noscript list below keeps every item shoppable. -->
+    <section class="featured-carousel" id="featured" aria-labelledby="featured-products-title">
+      <div class="container">
+        <div class="featured-carousel__header">
+          <h2 class="section-title" id="featured-products-title">Featured Products</h2>
+        </div>
+      </div>
+
+      <div class="featured-carousel__stage">
+        <button class="featured-carousel__button featured-carousel__button--prev" id="featured-products-prev" type="button"
+          aria-label="Show previous featured products" aria-controls="featured-products-track">
+          <span aria-hidden="true">&#8592;</span>
+        </button>
+        <div class="featured-carousel__viewport">
+          <ul class="featured-carousel__track" id="featured-products-track"></ul>
+        </div>
+        <button class="featured-carousel__button featured-carousel__button--next" id="featured-products-next" type="button"
+          aria-label="Show next featured products" aria-controls="featured-products-track">
+          <span aria-hidden="true">&#8594;</span>
+        </button>
+        <p class="visually-hidden" id="featured-products-status" aria-live="polite" aria-atomic="true"></p>
+      </div>
+
+      <noscript>
+        <ul class="container featured-carousel__fallback">
+          <li><a href="https://quickconnectfootwear.com/product/Elite-Package-Black-Slides">Elite Package - Black Slides, $125.00</a></li>
+          <li><a href="https://quickconnectfootwear.com/product/Elite-Package-White-Slides">Elite Package - White Slides, $125.00</a></li>
+          <li><a href="https://quickconnectfootwear.com/product/Element-Edition-Bundle">Element Edition Bundle, $64.00</a></li>
+          <li><a href="https://quickconnectfootwear.com/product/Element-Edition-Straps">Element Edition Straps, $20.00</a></li>
+          <li><a href="https://quickconnectfootwear.com/product/Regular-Straps">Regular Straps, $14.99</a></li>
+          <li><a href="https://quickconnectfootwear.com/product/Roots">Roots, $20.00</a></li>
+          <li><a href="/product/Flow">Flow, $20.00</a></li>
+          <li><a href="/product/Fire">Fire, $20.00</a></li>
+          <li><a href="/product/Breathe">Breathe, $20.00</a></li>
+          <li>Elite Package - Black, Out of Stock</li>
+        </ul>
+      </noscript>
+    </section>
+
+    <!-- v2.2 How It Works. Step copy and image stems live in HOW_IT_WORKS
+         in script.js so the section can be updated without rewriting markup.
+         The heading stays in .container; the step row sits outside it so
+         desktop can span the viewport the same way Featured Products does. -->
+    <section class="how-it-works" id="how-it-works" aria-labelledby="how-it-works-title">
+      <div class="container">
+        <div class="how-it-works__header">
+          <h2 class="section-title" id="how-it-works-title">How It Works</h2>
+        </div>
+      </div>
+      <ol class="how-it-works__steps" id="how-it-works-steps"></ol>
+      <noscript>
+        <ol class="container how-it-works__fallback">
+          <li>
+            <h3>Choose Your Base</h3>
+            <p>Unlike other flip flops or sandals, CC's have a base that comes with detachable straps so you can customize your shoes to match your outfit. Both our flip flops and slides come with the option of a black or white base.</p>
+          </li>
+          <li>
+            <h3>Choose Your Straps</h3>
+            <p>You can completely customize your CC's by choosing the colors and designs that match your style. With our simple twist technology, all the straps are interchangeable so you can easily change up your look without changing your shoes.</p>
+          </li>
+          <li>
+            <h3>Show Off Your Style</h3>
+            <p>Once you have your base and your straps, you're ready to show off your style. With CC's, you can switch up your style with a quick twist of the straps. Collect as many straps as you have outfits.</p>
+          </li>
+        </ol>
+      </noscript>
+    </section>
+
+    <!-- v1.5 interactive timeline. Milestone copy and image stems are kept
+         together in STORY_MILESTONES in script.js for straightforward swaps. -->
+    <section class="story-timeline" id="story" aria-labelledby="story-timeline-title">
+      <div class="container story-timeline__inner">
+        <div class="story-timeline__header">
+          <h2 class="section-title" id="story-timeline-title">Our Story</h2>
+        </div>
+
+        <div class="story-timeline__stage" id="story-timeline-stage">
+          <div class="story-timeline__media-wrap">
+            <div class="story-timeline__media" id="story-timeline-media"></div>
+          </div>
+
+          <div class="story-timeline__rail" role="group" aria-label="Story milestones">
+            <button class="story-timeline__button" id="story-timeline-prev" type="button"
+              aria-label="Previous story milestone" aria-controls="story-timeline-stage">
+              <span aria-hidden="true">&#8593;</span>
+            </button>
+            <div class="story-timeline__rail-body">
+              <span class="story-timeline__line" aria-hidden="true">
+                <span class="story-timeline__line-fill" id="story-timeline-fill"></span>
+              </span>
+              <ol class="story-timeline__dots" id="story-timeline-dots"></ol>
+            </div>
+            <button class="story-timeline__button" id="story-timeline-next" type="button"
+              aria-label="Next story milestone" aria-controls="story-timeline-stage">
+              <span aria-hidden="true">&#8595;</span>
+            </button>
+          </div>
+
+          <div class="story-timeline__content" id="story-timeline-content" aria-live="polite" aria-atomic="true">
+            <p class="story-timeline__date" id="story-timeline-date"></p>
+            <h3 class="story-timeline__title" id="story-timeline-milestone-title"></h3>
+            <p class="story-timeline__body" id="story-timeline-body"></p>
+          </div>
+        </div>
+
+        <noscript>
+          <ol class="story-timeline__fallback">
+            <li>
+              <h3>The Idea</h3>
+              <p>2024</p>
+              <p>It started with a simple frustration: why can't you change your flip-flop straps without buying a whole new pair?</p>
+            </li>
+            <li>
+              <h3>First Prototype</h3>
+              <p>Early 2025</p>
+              <p>The first Click Clocks prototype was built in a garage. Messy, imperfect, and exactly what we needed to prove the concept worked.</p>
+            </li>
+            <li>
+              <h3>The Brand Takes Shape</h3>
+              <p>Mid 2025</p>
+              <p>Quick Connect Footwear, LLC was formed. The name Click Clocks stuck. The mission became clear: customizable footwear that doesn't cost the earth.</p>
+            </li>
+            <li>
+              <h3>First Drop</h3>
+              <p>2026</p>
+              <p>The Element Edition launched. Roots, Flow, Fire, Breathe: four straps, four moods, one base. The response blew us away.</p>
+            </li>
+            <li>
+              <h3>What's Next</h3>
+              <p>Coming Soon</p>
+              <p>New colorways, brand collabs, and a full slide collection. We're just getting started.</p>
+            </li>
+          </ol>
+        </noscript>
+      </div>
+    </section>
+
+    <!-- v2.3 Why Click Clocks Are Different. Slide copy and image stems live
+         in WHY_CLICK_CLOCKS in script.js. Auto-advance uses the same
+         --slide-duration token as the hero. -->
+    <section class="why-different" id="why" aria-labelledby="why-different-title">
+      <div class="container">
+        <div class="why-different__header">
+          <h2 class="section-title" id="why-different-title">Why Click Clocks Are Different</h2>
+        </div>
+      </div>
+
+      <div class="why-carousel" id="why-carousel">
+        <ul class="why-carousel__slides" id="why-slides"></ul>
+        <button class="why-carousel__button why-carousel__button--prev" id="why-prev" type="button"
+          aria-label="Previous slide" aria-controls="why-slides">
+          <span aria-hidden="true">&#8592;</span>
+        </button>
+        <button class="why-carousel__button why-carousel__button--next" id="why-next" type="button"
+          aria-label="Next slide" aria-controls="why-slides">
+          <span aria-hidden="true">&#8594;</span>
+        </button>
+        <div class="why-carousel__progress" id="why-progress"></div>
+      </div>
+
+      <noscript>
+        <ol class="container why-different__fallback">
+          <li>
+            <h3>Sustainable &amp; Durable</h3>
+            <p>Our straps are virtually indestructible, built to withstand daily wear while remaining comfortable and stylish.</p>
+          </li>
+          <li>
+            <h3>Endless Variety</h3>
+            <p>Instead of buying entirely new flip-flops, you can simply purchase new straps in fresh colors and designs released every year.</p>
+          </li>
+          <li>
+            <h3>Eco-Friendly Soles</h3>
+            <p>Our lightweight soles are replaceable at a fraction of the cost. When returned, your old soles are responsibly recycled and repurposed through partner organizations, keeping waste out of landfills and oceans.</p>
+          </li>
+          <li>
+            <h3>Positive Impact</h3>
+            <p>Every pair of Click Clocks purchased helps support Blue Waters and other nonprofit organizations dedicated to protecting marine environments, reducing plastic pollution, and creating a cleaner, healthier planet.</p>
+          </li>
+          <li>
+            <h3>A Step Toward Change</h3>
+            <p>Every step you take in Click Clocks is a step toward reducing ocean plastic and protecting our planet. Together, we can transform the way we think about footwear.</p>
+          </li>
+        </ol>
+      </noscript>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" id="site-footer">
+    <noscript>
+      <div class="container">
+        <p><a href="/pages/our-story">Our Story</a></p>
+        <p><a href="/collections/all/">Shop All</a></p>
+        <p><a href="/pages/contact">Contact Us</a></p>
+        <p>&copy; 2026 Quick Connect Footwear, LLC. All rights reserved.</p>
+      </div>
+    </noscript>
+  </footer>
+
+  <script src="catalog.js?v=28" defer></script>
+  <script src="script.js?v=26" defer></script>
+</body>
+</html>
